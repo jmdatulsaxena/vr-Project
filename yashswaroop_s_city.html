@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R R R</title>
+  <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  <style>
+    #container {
+      padding: 50px;
+      background-color: #EEE;
+    }
+    #container h1 {
+      font-size: 48px;
+      font-family: sans-serif;
+      color: #0080AB;
+    }
+    div.v_bar{
+    	background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+
+</div>
+
+<script type="text/babel">
+  var destination = document.querySelector("#container");
+
+  var VideoMain = React.createClass({
+
+  	play_pause: () => {
+  	var vid = document.querySelector("#video-1-sex-n-city-trailer");
+	var pp_btn = document.querySelector("#play_pause_button");		
+		if(vid.paused){
+			vid.play();
+			pp_btn.innerHTML = "Pause";
+		} else {
+			vid.pause();
+			pp_btn.innerHTML = "Play";
+		}
+  	},
+	render: function() {
+
+		return (
+			<div id="v_main">
+				<video id="video-1-sex-n-city-trailer" width="550" height="310" autoPlay>
+		    		<source src="video-1-sex-n-city-trailer.mp4">
+
+					</source>
+		  		</video>	
+			  	<div id="v_bar" className="v_bar">
+					<button id="play_pause_button" onClick={this.play_pause}>Pause</button>
+			  	</div>
+
+		  	</div>
+
+
+		)
+
+	}
+	
+	});
+
+
+  ReactDOM.render(
+	<div>
+    		<VideoMain />	
+
+	</div>,
+	destination
+  );
+
+</script>
+
+</body>
+</html>
