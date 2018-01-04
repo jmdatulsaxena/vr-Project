@@ -26,26 +26,16 @@
 
 <script type="text/babel">
   var destination = document.querySelector("#container");
-  window.onload = initialize;
-  var vid;
- 
-  function initialize(){
-  	vid = document.querySelector("#video-1-sex-n-city-trailer");
-  	vid.addEventListener("click", showChoices, false);
-  }
-  
-  function showChoices(){
-  	vid.pause();
-  }
   
   var VideoMain = React.createClass({
+  	showChoices: function(e){
+		this.pause();
+	}
+	
 	render: function() {
-		var btnStyle = {
-			backgroundColor:"#CA7"
-		};
 		return (
 			<div id="v_main">
-				<video controls id="video-1-sex-n-city-trailer" width="550" height="310" autoPlay>
+				<video controls id="video-1-sex-n-city-trailer" width="550" height="310" onClick={this.showChoices} autoPlay>
 		    		<source src="video-1-sex-n-city-trailer.mp4"> </source>
 		  		</video>
 		  	</div>
