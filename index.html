@@ -29,21 +29,21 @@
 <script type="text/babel">
   var destination = document.querySelector("#container");
   window.onload = initialize;
+  var vid;
  
   function initialize(){
-  	var vid = document.querySelector("#video-1-sex-n-city-trailer");
+  	vid = document.querySelector("#video-1-sex-n-city-trailer");
   	vid.addEventListener("click", showChoices, false);
   }
   
   function showChoices(){
-  	print();
+  	vid.pause();
   }
   
   var VideoMain = React.createClass({
 
   	play_pause: () => {
-  		
-		var pp_btn = document.querySelector("#play_pause_button");		
+  		var pp_btn = document.querySelector("#play_pause_button");		
 		if(vid.paused){
 			vid.play();
 			pp_btn.innerHTML = "Pause";
