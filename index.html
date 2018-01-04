@@ -28,7 +28,7 @@
   var destination = document.querySelector("#container");
   
   var VideoMain = React.createClass({
-  	showChoices: function(e){
+  	showChoices: () => {
 		this.pause();
 	},
 	
@@ -39,7 +39,7 @@
 		    		<source src="video-1-sex-n-city-trailer.mp4"> </source>
 		  		</video>
 		  	</div>
-		)
+		);
 	}
   });
 
