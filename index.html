@@ -28,6 +28,12 @@
   var destination = document.querySelector("#container");
   
   var VideoMain = React.createClass({
+  	getInitialState: () => {
+		return {
+			showVideoOnly: true
+		};
+	}.
+  
   	const videoMode = this.state.showVideoOnly;
   	showVideoOnly: () => {
 		var vid = document.querySelector("#video-1-sex-n-city-trailer");
