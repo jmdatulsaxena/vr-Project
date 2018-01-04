@@ -28,12 +28,25 @@
   var destination = document.querySelector("#container");
   
   var VideoMain = React.createClass({
+  	const videoMode = this.state.showVideoOnly;
+  	showVideoOnly: () => {
+		var vid = document.querySelector("#video-1-sex-n-city-trailer");
+		vid.play();
+		this.setState({ showVideoOnly: true});
+	}
+  
   	showChoices: () => {
 		var vid = document.querySelector("#video-1-sex-n-city-trailer");
 		vid.pause();
+		this.setState({ showVideoOnly: false});
 	},
 	
 	render: function() {
+		if (videoMode){
+		}
+		else{
+		}
+	
 		return (
 			<div id="v_main">
 				<video controls id="video-1-sex-n-city-trailer" width="550" height="310" onClick={this.showChoices} autoPlay>
