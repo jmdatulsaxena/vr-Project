@@ -28,11 +28,21 @@
 
 <script type="text/babel">
   var destination = document.querySelector("#container");
-
+  var vid = document.querySelector("#video-1-sex-n-city-trailer");
+  window.onload = initialize;
+ 
+  function initialize(){
+  	vid.addEventListener("click", showChoices, false);
+  }
+  
+  function showChoices(){
+  	print();
+  }
+  
   var VideoMain = React.createClass({
 
   	play_pause: () => {
-  		var vid = document.querySelector("#video-1-sex-n-city-trailer");
+  		
 		var pp_btn = document.querySelector("#play_pause_button");		
 		if(vid.paused){
 			vid.play();
