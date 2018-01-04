@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>R R R</title>
+  <title>VR-Project</title>
   <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
   <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
@@ -21,9 +21,7 @@
   </style>
 </head>
 <body>
-
 <div id="container">
-
 </div>
 
 <script type="text/babel">
@@ -41,17 +39,6 @@
   }
   
   var VideoMain = React.createClass({
-
-  	play_pause: () => {
-  		var pp_btn = document.querySelector("#play_pause_button");		
-		if(vid.paused){
-			vid.play();
-			pp_btn.innerHTML = "Pause";
-		} else {
-			vid.pause();
-			pp_btn.innerHTML = "Play";
-		}
-  	},
 	render: function() {
 		var btnStyle = {
 			backgroundColor:"#CA7"
@@ -59,21 +46,12 @@
 		return (
 			<div id="v_main">
 				<video controls id="video-1-sex-n-city-trailer" width="550" height="310" autoPlay>
-		    		<source src="video-1-sex-n-city-trailer.mp4">
-
-					</source>
+		    		<source src="video-1-sex-n-city-trailer.mp4"> </source>
 		  		</video>
-				
-			  	<div id="v_bar" className="xv_bar" style={btnStyle}>
-					<button id="play_pause_button" onClick={this.play_pause}>Pause</button>
-			  	</div>
-				
 		  	</div>
 		)
-
 	}
-	
-	});
+  });
 
 
   ReactDOM.render(
