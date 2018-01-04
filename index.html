@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VR-Project</title>
+  <title>VR Project</title>
   <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
   <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
@@ -15,7 +15,7 @@
       font-family: sans-serif;
       color: #0080AB;
     }
-    div.v_bar{
+    div.v_main{
     	background-color: #bbb;
     }
   </style>
@@ -36,7 +36,8 @@
 		return (
 			<div id="v_main">
 				<video controls id="video-1-sex-n-city-trailer" width="550" height="310" onClick={this.showChoices} autoPlay>
-		    		<source src="video-1-sex-n-city-trailer.mp4"> </source>
+		    		<source src="video-1-sex-n-city-trailer.mp4">
+				</source>
 		  		</video>
 		  	</div>
 		);
