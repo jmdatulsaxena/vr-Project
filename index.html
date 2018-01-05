@@ -41,8 +41,9 @@
   var rectBackground = React.createClass({
   	render() {
 		return(
-			<button> X
-			</button>
+			<div>
+				Entered
+			</div>
 		);
 	}
   });
@@ -74,10 +75,9 @@
 		    		<source src="video-1-sex-n-city-trailer.mp4">
 				</source>
 		  		</video>
-				{this.state.showVideoOnly ? null : <rectBackground />}
+				{this.state.showVideoOnly ? null : <rectBackground />}				
 		  	</div>
-		);
-		
+		);		
 	}
   });
 
