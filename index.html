@@ -37,26 +37,25 @@
 
 <script type="text/babel">
   var destination = document.querySelector("#container");
-  
-  class VideoMain extends React.Component({
-	constructor(props){
-		super(props);
-		this.state = {
+
+  var VideoMain = React.createClass({
+	getInitialState: () => {
+		return {
 			showVideoOnly: true
 		};
-	}
+	},
   
   	showVideoOnly: () => {
 		var vid = document.querySelector("#video-1-sex-n-city-trailer");
 		vid.play();
 		this.setState({ showVideoOnly: true});
-	}
+	}.bind(this),
   
   	showChoices: () => {
 		var vid = document.querySelector("#video-1-sex-n-city-trailer");
 		vid.pause();
 		this.setState({ showVideoOnly: false});
-	}
+	}.bind(this),
 	
 	render: function() {	
 		return (
