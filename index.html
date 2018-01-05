@@ -38,6 +38,15 @@
 <script type="text/babel">
   var destination = document.querySelector("#container");
 
+  var rectBackground = React.createClass({
+  	render() {
+		return(
+			<button> X
+			</button>
+		);
+	}
+  });
+  
   var VideoMain = React.createClass({
 	getInitialState: () => {
 		return {
@@ -65,6 +74,7 @@
 		    		<source src="video-1-sex-n-city-trailer.mp4">
 				</source>
 		  		</video>
+				{this.state.showVideoOnly ? null : <rectBackground />}
 		  	</div>
 		);
 		
