@@ -26,6 +26,17 @@
  	  padding: 3px 0 6px 0;
  	  cursor: hand
      }
+     #background {
+	 position: fixed;
+	 left: 0;
+	 top: 0;
+	 height: 100%;
+	 width: 100%;
+	 z-index: 1000000;
+	 background: rgba(0, 0, 0, 0.9);
+	 opacity: 0.75;
+	 overflow-y: scroll
+     }
   </style>
 </head>
 <body>
@@ -38,9 +49,8 @@
   var rectBackground = React.createClass({
   	render() {
 		return(
-			<div>
-				Hello
-			</div>
+			<background>
+			</background>
 		);
 	}
   });
