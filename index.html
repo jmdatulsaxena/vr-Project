@@ -38,8 +38,10 @@
   var rectBackground = React.createClass({
   	render() {
 		return(
-			<div width="550" height="310" opacity="0.75">
-			</div>
+			<svg width="550" height="310">
+			  <rect width="550" height="310"
+			  style="fill:black;stroke:pink;stroke-width:5;fill-opacity:0.75;" />
+			</svg>
 		);
 	}
   });
