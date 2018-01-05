@@ -38,10 +38,7 @@
   var rectBackground = React.createClass({
   	render() {
 		return(
-			<svg width="550" height="310">
-			  <rect width="550" height="310"
-			  style="fill:black;stroke:pink;stroke-width:5;fill-opacity:0.75;" />
-			</svg>
+			
 		);
 	}
   });
@@ -69,7 +66,7 @@
 	render() {	
 		return (
 			<div id="v_main">
-				<video controls id="video-1-sex-n-city-trailer" width="550" height="310" onClick={this.showChoices} autoPlay>
+				<video controls id="video-1-sex-n-city-trailer" onClick={this.showChoices} autoPlay>
 		    		<source src="video-1-sex-n-city-trailer.mp4">
 				</source>
 		  		</video>
