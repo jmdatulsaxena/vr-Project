@@ -45,17 +45,17 @@
 		};
 	},
   
-  	showVideoOnly: () => {
+  	showVideoOnly() {
 		var vid = document.querySelector("#video-1-sex-n-city-trailer");
 		vid.play();
 		this.setState({ showVideoOnly: true});
-	}.bind(this),
+	},
   
-  	showChoices: () => {
+  	showChoices() {
 		var vid = document.querySelector("#video-1-sex-n-city-trailer");
 		vid.pause();
 		this.setState({ showVideoOnly: false});
-	}.bind(this),
+	},
 	
 	render: function() {	
 		return (
