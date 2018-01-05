@@ -54,10 +54,11 @@
   	showChoices() {
 		var vid = document.querySelector("#video-1-sex-n-city-trailer");
 		vid.pause();
+		console.log ("answer: " + this.state.showVideoOnly);
 		this.setState({ showVideoOnly: false});
 	},
 	
-	render: function() {	
+	render() {	
 		return (
 			<div id="v_main">
 				<video controls id="video-1-sex-n-city-trailer" width="550" height="310" onClick={this.showChoices} autoPlay>
@@ -65,6 +66,10 @@
 				</source>
 		  		</video>
 		  	</div>
+			if (!this.state.showVideoOnly) {
+				<button id="exitButton" onClick={this.showVideoOnly}>
+				</button>
+			}
 		);
 		
 	}
