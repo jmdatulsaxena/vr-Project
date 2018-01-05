@@ -38,24 +38,25 @@
 <script type="text/babel">
   var destination = document.querySelector("#container");
   
-  var VideoMain = React.createClass({
-  	getInitialState: () => {
-		return {
+  class VideoMain extends React.Component({
+	constructor(props){
+		super(props);
+		this.state = {
 			showVideoOnly: true
 		};
-	},
+	}
   
   	showVideoOnly: () => {
 		var vid = document.querySelector("#video-1-sex-n-city-trailer");
 		vid.play();
 		this.setState({ showVideoOnly: true});
-	},
+	}
   
   	showChoices: () => {
 		var vid = document.querySelector("#video-1-sex-n-city-trailer");
 		vid.pause();
 		this.setState({ showVideoOnly: false});
-	},
+	}
 	
 	render: function() {	
 		return (
@@ -65,10 +66,7 @@
 				</source>
 		  		</video>
 		  	</div>
-			if (!this.state.showVideoOnly) {
-				
-				console.log("show video Only");			
-			}
+			
 		);
 		
 	}
