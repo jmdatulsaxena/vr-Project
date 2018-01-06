@@ -17,13 +17,13 @@
  	  padding: 3px 0 6px 0;
  	  cursor: hand
      }
-     #background {
+     #base {
 	 backgroundColor: "#FF6663";
 	 opacity: 0.75;
 	 overflow-y: scroll;
 	 width:100%;
 	 height:100%;
-	 position: absolute;
+	 position: relative;
 	 top:0;
 	 left:0;
      }
@@ -42,7 +42,7 @@
   var rectBackground = React.createClass({
   	render() {
 			return (
-				<div id="background">					
+				<div id="base">					
 				</div>
 			);
 	}
