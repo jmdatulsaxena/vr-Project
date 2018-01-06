@@ -27,15 +27,14 @@
  	  cursor: hand
      }
      #background {
-	 position: fixed;
-	 left: 0;
-	 top: 0;
-	 height: 100%;
-	 width: 100%;
-	 z-index: 1000000;
-	 background: rgba(0, 0, 0, 0.9);
+	 height: 100;
+	 width: 100;
+	 backgroundColor: "#FF6663"
 	 opacity: 0.75;
-	 overflow-y: scroll
+	 overflow-y: scroll;
+     }
+     #v_main {
+	z-index: -100;
      }
   </style>
 </head>
@@ -48,10 +47,10 @@
 
   var rectBackground = React.createClass({
   	render() {
-		return(
-			<background>
-			</background>
-		);
+			return (
+				<div id="background">					
+				</div>
+			);
 	}
   });
   
