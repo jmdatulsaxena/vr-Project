@@ -6,15 +6,6 @@
   <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
   <style>
-    #container {
-      padding: 50px;
-      background-color: #EEE;
-    }
-    #container h1 {
-      font-size: 48px;
-      font-family: sans-serif;
-      color: #0080AB;
-    }
     .button {
  	  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Media_Viewer_Icon_-_Close.svg/2000px-Media_Viewer_Icon_-_Close.svg.png");
  	  background-position: top right;
@@ -27,11 +18,14 @@
  	  cursor: hand
      }
      #background {
-	 height: 100;
-	 width: 100;
 	 backgroundColor: "#FF6663";
 	 opacity: 0.75;
 	 overflow-y: scroll;
+	 width:100%;
+	 height:100%;
+	 position: absolute;
+	 top:0;
+	 left:0;
      }
      #v_main {
 	z-index: -100;
