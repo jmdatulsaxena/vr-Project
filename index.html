@@ -64,15 +64,11 @@
 	render() {	
 		return (
 			<div id="v_main">
-				<div id="v_main_inner">
-					<video controls id="video-1-sex-n-city-trailer" width="550" height="310" onClick={this.showChoices} autoPlay>
-		    			<source src="video-1-sex-n-city-trailer.mp4">
-					</source>
-		  			</video>
-				</div>
-				<div id="v_main_selection_window">
-					{this.state.showVideoOnly ? null : <rectBackground />}				
-		  		</div>
+				<video controls id="video-1-sex-n-city-trailer" width="550" height="310" onClick={this.showChoices} autoPlay>
+				<source src="video-1-sex-n-city-trailer.mp4">
+				</source>
+				</video>
+				{this.state.showVideoOnly ? null : <rectBackground />}				
 			</div>
 		);		
 	}
