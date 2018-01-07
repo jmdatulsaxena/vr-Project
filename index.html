@@ -31,7 +31,8 @@
   var rectBackground = React.createClass({
   	render() {
 			return (
-				<div id="new1" style="width:980px; height:600px; background-color:blue"></div>
+				<div id="new1" style="width:980px; height:600px; background-color:blue">
+				</div>
 			);
 	}
   });
@@ -63,7 +64,7 @@
 				<source src="video-1-sex-n-city-trailer.mp4">
 				</source>
 				</video>
-				{this.state.showVideoOnly ? null : <div id="new1" style="width:980px; height:600px; background-color:blue"></div>}	
+				{this.state.showVideoOnly ? null : <rectBackground />}	
 			</div>
 		);		
 	}
