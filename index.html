@@ -64,13 +64,13 @@
 	render() {	
 		return (
 			<div id="v_main">
+				<div id="overlay">					
+				</div>
 				<video controls id="video-1-sex-n-city-trailer" width="550" height="310" onClick={this.showChoices} autoPlay>
 				<source src="video-1-sex-n-city-trailer.mp4">
 				</source>
 				</video>
 				{this.state.showVideoOnly ? null : <rectBackground />}	
-				<div id="overlay">					
-				</div>
 			</div>
 		);		
 	}
